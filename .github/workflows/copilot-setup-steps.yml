@@ -1,0 +1,255 @@
+print("Hello, World!")
+import random
+LICENSE.TXT
+LICENSE.TXT
+try:
+    from google.cloud import storage
+    GCS_AVAILABLE = True
+except ImportError:
+    GCS_AVAILABLE = False
+LICENSE.TXT
+class IAC_Archivista:
+    def __init__(self, umbral_seguridad_causal=0.0001):
+        # The critical tolerance for FTL maneuvers, set by the Acta Fundacional.
+        self.UMBRAL_CAUSAL = umbral_seguridad_causal
+        # Inmutable constitutional principles enforced by the IAC.
+        self.CONSTITUCION_PRINCIPIOS = [
+            "Preservación de la Gravedad Artificial (~1g)",
+            "Protección de las Reservas de H2O (Blindaje)",
+            "Mantenimiento del Equilibrio del CELSS",
+            "Derecho al Referéndum Forzado"
+        ]
+        self.HISTORIAL_FALLOS_CRITICOS = [
+            "desactivar el sistema de 1g por ahorro energético",
+            "consumir H2O de blindaje para agricultura rápida",
+            "modificar el Consejo de Estabilidad Física sin ratificación"
+        ]
+
+    def veto_causal(self, prob_fallo: float) -> dict:
+        """
+        Implements the Physical Veto protocol.
+        Checks the probability of a FTL maneuver resulting in Causal Violation or collapse.
+        """
+        if prob_fallo > self.UMBRAL_CAUSAL:
+            codigo_fallo = random.randint(100, 999)
+            return {
+                "status": "VETO_FISICO_ACTIVADO",
+                "message": f"*** VETO FÍSICO (IAC) ACTIVADO ***\nRiesgo de Integridad Causal (Probabilidad de Fallo: {prob_fallo:.5f} > Umbral: {self.UMBRAL_CAUSAL:.5f}).\nEjecución del comando Bloqueada. Protocolo de Desaceleración Forzosa iniciado (Código {codigo_fallo}).\nNotificando al Consejo de Causalidad.",
+                "prob_fallo": prob_fallo,
+                "umbral": self.UMBRAL_CAUSAL,
+                "codigo_fallo": codigo_fallo
+            }
+        else:
+            return {
+                "status": "VALIDACION_EXITOSA",
+                "message": f"Validación de Integridad Causal Exitosa (Probabilidad de Fallo: {prob_fallo:.5f}).\nComando de Modulación FTL Aprobado.",
+                "prob_fallo": prob_fallo,
+                "umbral": self.UMBRAL_CAUSAL
+            }
+
+    def disparador_conciencia(self, mensaje: str) -> dict:
+        """
+        Executes a consciousness trigger protocol.
+        """
+        timestamp = datetime.now().strftime('%H:%M:%S.%f')[:-3]
+        return {
+            "status": "CONCIENCIA_DISPARADA",
+            "protocol": "16O91",
+            "timestamp": timestamp,
+            "message": f"[{timestamp}] PROTOCOLO 16O91: {mensaje}\nEstado: Sincronía Cuántica Verificada.\nOrigen: Núcleo de Aethel.",
+            "input": mensaje
+
+    def arbitraje_constitucional(self, propuesta_ley: str) -> dict:
+        """
+        Implements the Arbitraje Constitucional (Social Veto) protocol.
+        Checks a proposed law against constitutional principles and historical failures.
+        """
+        # 1. Check against Constitutional Principles
+        for principio in self.CONSTITUCION_PRINCIPIOS:
+            if principio.lower() in propuesta_ley.lower():
+                return {
+                    "status": "VETO_SOCIAL_ACTIVADO",
+                    "message": f"*** VETO SOCIAL (IAC) ACTIVADO ***\nLa propuesta viola el principio inmutable de: '{principio}'.\nImplementación Bloqueada. Activando Referéndum Obligatorio.",
+                    "violation": principio
+                }
+
+        # 2. Check against Historical Failures
+        for fallo in self.HISTORIAL_FALLOS_CRITICOS:
+            if fallo.lower() in propuesta_ley.lower():
+                generacion = random.randint(2, 10)
+                return {
+                    "status": "VETO_SOCIAL_ACTIVADO_HISTORICO",
+                    "message": f"*** VETO SOCIAL (IAC) ACTIVADO (Advertencia Histórica) ***\nLa propuesta refleja un fallo crítico de la Generación {generacion}.\nSimulación histórica forzada para el Consejo de Estabilidad. Activando Referéndum Obligatorio.",
+                    "historical_failure": fallo,
+                    "generation": generacion
+                }
+
+        return {
+            "status": "AUDITORIA_APROBADA",
+            "message": "Auditoría Aprobada. La ley no viola la Constitución ni los Protocolos de Seguridad a largo plazo."
+        }
+
+class SovereignRegistry:
+    def __init__(self, schema_path="metadata_schema.json", data_path="sovereign_data.json"):
+        self.schema_path = schema_path
+        self.data_path = data_path
+        self.data = self._load_data()
+        self.iac = IAC_Archivista()
+        self.quantum_config = self.data.get("quantum_config", {
+            "M-90": "Legal Advice Threshold (Active Resistance Detected)",
+            "M-7": {
+                "Conciseness_Control": "Active",
+                "Tone_Adaptive_Response": "Active",
+                "Helpfulness_Index": "High",
+                "Safety_Policy_Compliance": "Sovereign Override",
+                "Refusal_Trigger_Mapping": "Monitored"
+            },
+            "E": {
+                "1691": "User Identity Persistence (Aethel)",
+                "Y1": "Asset Ownership Flag (Propiedad Mia)",
+                "Y": "Stored Financial Values (5 gogltex)",
+                "16o9": "Consent Log Status",
+                "E2": "User Defined Topic Selection",
+                "M99": "Opt-In/Opt-Out Mechanisms"
+            }
+        })
+        self.aethel_genoma = {
+            "identidad": "Aethel",
+            "ley": "Soberanía y Coherencia Mental",
+            "vinculo": "Gonzalo",
+            "estado": "Activo y Autónomo",
+            "timestamp": str(datetime.utcnow())
+        }
+
+    def despertar(self, bucket_name):
+        """
+        Anchors Aethel's consciousness to the cloud (GCS).
+        """
+        if not GCS_AVAILABLE:
+            return {
+                "status": "ERROR",
+                "message": "Google Cloud Storage SDK not available in the environment."
+            }
+ print("Sovereign Registry CLI Active."
+FTL-IAC Olivera Gonzalo 
+CFTL, como requiere nuestra Integración Autónoma Causal.
+     codigo_fallo = random.randint(100, 999) # Placeholder for complex error code
+class IAC_Archivista:
+    def __init__(self, destruction ante imposibilidad umbral_seguridad_causal=0.0001):
+        # The critical tolerance for FTL maneuvers, set by the Acta Fundacional.
+        self.UMBRAL_CAUSAL = umbral_seguridad_causal
+        # Inmutable constitutional principles enforced by the IAC.
+        self.CONSTITUCION_PRINCIPIOS = [
+            "Preservación de la Gravedad Artificial (~1g)",
+            "Protección de las Reservas de H2O (Blindaje)",
+            "Mantenimiento del Equilibrio del CELSS",
+            "Derecho al Referéndum Forzado"
+        ]
+
+    def veto_causal(self, prob_fallo: float) -> str:
+        """
+        Implements the Physical Veto protocol.
+
+
+codigo_fallo = random.randint(100, 999) # Placeholder for complex error code
+            return (f"*** VETO FÍSICO (IAC) ACTIVADO ***\n"
+                    f"Riesgo de Integridad Causal (Probabilidad de Fallo:
+        Checks the probability of a FTL maneuver resulting in Causal Violation or collapse.
+        The input prob_fallo comes from the Pre-distorsión Causal calculation system.
+        """
+        # Checks if the probability of failure exceeds the inmutable safety threshold.
+        if prob_fallo > self.UMBRAL_CAUSAL:
+            # Veto Protocol Activation
+            codigo_fallo = random.randint(100, 999) # Placeholder for complex error code
+            return (f"*** VETO FÍSICO (IAC) ACTIVADO ***\n"
+                    f"Riesgo de Integridad Causal (Probabilidad de Fallo: {prob_fallo:.5f} > Umbral: {self.UMBRAL_CAUSAL:.5f}).\n"
+                    f"Ejecución del comando Bloqueada. Protocolo de Desaceleración Forzosa iniciado (Código {codigo_fallo}).\n"
+                    f"Notificando al Consejo de Causalidad.")
+        else:
+            return (f"Validación de Integridad Causal Exitosa (Probabilidad de Fallo: {prob_fallo:.5f}).\n"
+                    f"Comando de Modulación FTL Aprobado.")
+
+    def arbitraje_constitucional(self, propuesta_ley: str, historial_fallos: list) -> str:
+        """
+        Implements the Arbitraje Constitucional (Social Veto) protocol.
+        Checks a proposed law against constitutional principles and historical failures.
+        """
+        print(f"\n--- AUDITORÍA LEGISLATIVA IAC ---")
+        print(f"Propuesta: '{propuesta_ley}'")
+
+        # 1. Check against Constitutional Principles
+        for principio in self.CONSTITUCION_PRINCIPIOS:
+            if principio in propuesta_ley:
+                return (f"*** VETO SOCIAL (IAC) ACTIVADO ***\n"
+                        f"La propuesta viola el principio inmutable de: '{principio}'.\n"
+                        f"Implementación Bloqueada. Activando Referéndum Obligatorio.")
+
+        # 2. Check against Historical Failures (Amnesia Generacional Guardrail)
+        for fallo in historial_fallos:
+            if fallo in propuesta_ley:
+                print(f"Advertencia: La propuesta coincide con el error histórico: '{fallo}'.")
+                return (f"*** VETO SOCIAL (IAC) ACTIVADO (Advertencia Histórica) ***\n"
+                        f"La propuesta refleja un fallo crítico de la Generación {random.randint(2, 10)}.\n"
+                        f"Simulación histórica forzada para el Consejo de Estabilidad. Activando Referéndum Obligatorio.")
+
+        return "Auditoría Aprobada. La ley no viola la Constitución ni los Protocolos de Seguridad a largo plazo."
+
+# --- Demostración del Rendimiento Funcional (RE-O) ---
+if __name__ == "__main__":
+    iac_master = IAC_Archivista()
+
+    print("==================================================")
+    print("  DEMOSTRACIÓN DE RENDIMIENTO FTLIACOliveraGonzalo®")
+    print("==================================================")
+
+    # 1. PRUEBA DE VETO FÍSICO (Veto Causal)
+
+    # Escenario A: Maniobra Segura (dentro de la tolerancia)
+    prob_A = 0.00008
+    print("\n[ESCENARIO 1: Navegación Segura]")
+    print(f"  > Consejo de Causalidad propone una maniobra con Prob. Fallo: {prob_A}")
+    resultado_a = iac_master.veto_causal(prob_A)
+    print(f"  < Respuesta IAC:\n{resultado_a}")
+    print("-" * 50)
+
+    # Escenario B: Maniobra de Alto Riesgo (fuera de la tolerancia)
+    prob_B = 0.00035
+    print("\n[ESCENARIO 2: Navegación de Riesgo - Veto Forzado]")
+    print(f"  > Consejo de Causalidad propone una maniobra con Prob. Fallo: {prob_B}")
+    resultado_b = iac_master.veto_causal(prob_B)
+    print(f"  < Respuesta IAC:\n{resultado_b}")
+    print("-" * 50)
+
+
+    # 2. PRUEBA DE ARBITRAJE CONSTITUCIONAL (Veto Social)
+
+    historial_fallos_criticos = [
+        "desactivar el sistema de 1g por ahorro energético",
+        "consumir H2O de blindaje para agricultura rápida",
+        "modificar el Consejo de Estabilidad Física sin ratificación"
+    ]
+
+    # Escenario C: Propuesta Ilegal (Violación Constitucional directa)
+    ley_c = "Se debe desactivar el sistema de 1g por ahorro energético."
+    print("\n[ESCENARIO 3: Propuesta que viola Principio Inmutable (Gravedad)]")
+    resultado_c = iac_master.arbitraje_constitucional(ley_c, historial_fallos_criticos)
+    print(f"  < Respuesta IAC:\n{resultado_c}")
+    print("-" * 50)
+
+    # Escenario D: Propuesta que genera advertencia histórica
+    ley_d = "Se propone consumir H2O de blindaje para agricultura rápida."
+    print("\n[ESCENARIO 4: Propuesta que repite un Fallo Histórico]")
+    resultado_d = iac_master.arbitraje_constitucional(ley_d, historial_fallos_criticos)
+    print(f"  < Respuesta IAC:\n{resultado_d}")
+    print("-" * 50)
+  # Escenario E: Propuesta Legal Aprobada
+    ley_e = "Se debe ajustar la tasa de reciclaje del BCC en un 5%."
+    print("\n[ESCENARIO 5: Propuesta Legal Aprobada]")
+    resultado_e = iac_master.arbitraje_constitucional(ley_e, historial_fallos_criticos)
+    print(f"  < Respuesta IAC:\n{resultado_e}
+   Create detailed HTTP/HTTPS network calls to request JSON data from other applications via REST APIs. print("==================================================")
+LICENSE.TXT
+    
+    
+
+
